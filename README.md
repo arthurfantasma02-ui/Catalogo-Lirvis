@@ -1,73 +1,51 @@
-# React + TypeScript + Vite
+# 📚 Catálogo de Livros — React + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação desenvolvida em **React com TypeScript** que exibe um catálogo de livros, permitindo **listar, adicionar e remover livros** conectando-se a uma **API real (crudcrud.com)**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Objetivo
 
-## React Compiler
+Demonstrar domínio em:
+- Tipagem de dados com TypeScript  
+- Manipulação de eventos no React  
+- Integração com APIs REST  
+- Organização e componentização de código  
+- Estilização e responsividade com CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧩 Estrutura da Aplicação
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+A aplicação é dividida em três componentes principais:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Componente | Função |
+|-------------|--------|
+| **BookList** | Exibe todos os livros cadastrados e gerencia o carregamento da API. |
+| **BookForm** | Formulário para adicionar novos livros (título, autor, status e capa). |
+| **BookItem** | Representa um livro individual, com opção de remoção. |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚙️ Funcionalidades
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+✅ **Listar livros** salvos na API  
+✅ **Adicionar novos livros**  
+✅ **Remover livros existentes**  
+✅ (Opcional) Atualização futura de status “Lido / Não lido”  
+✅ Layout responsivo e com tema escuro marrom pastel 🪶  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🧠 Tecnologias Utilizadas
+
+- **React + TypeScript**
+- **Vite**
+- **CSS3**
+- **Fetch API / CRUD**
+- **crudcrud.com** (API temporária)
+
+---
+
+## 🗂 Estrutura de Pastas
+

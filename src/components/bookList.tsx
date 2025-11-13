@@ -50,7 +50,7 @@ async function deleteBook(id: string) {
     <div className="book-grid">
   {books.map((book) => (
   <div  className="book-card"
-    key={book.id}
+    key={book._id}
     style={{
       background: "#ffffffff",
       padding: "10px",
@@ -84,11 +84,12 @@ async function deleteBook(id: string) {
         marginBottom: "8px",
       }}
     >
-      {book.status}
+     <span className={book.status === "Lido" ? "badge lido" : "badge nao"}>{book.status}</span>
+
     </span>
 
     <button
-      onClick={() => deleteBook(book.id!)}
+      onClick={() => deleteBook(book._id!)}
       style={{
         marginTop: "8px",
         background: "#ff5555",

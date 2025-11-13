@@ -10,12 +10,12 @@ function BookForm({ onAdd }: BookFormProps) {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [status, setStatus] = useState<"Lido" | "Não lido">("Não lido");
-  const [cover, setCover] = useState(""); // ✅ AGORA ESTÁ NO LUGAR CERTO
+  const [cover, setCover] = useState(""); 
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
-    const newBook: Book = { title, author, status, cover }; // ✅ agora envia a capa
+    const newBook: Book = { title, author, status, cover };
 
     await fetch(API_URL, {
       method: "POST",

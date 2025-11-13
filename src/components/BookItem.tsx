@@ -3,12 +3,12 @@ import { API_URL } from "../api";
 
 interface BookItemProps {
   book: Book;
-  onDelete: () => void; // para recarregar a lista
+  onDelete: () => void;
 }
 
 function BookItem({ book, onDelete }: BookItemProps) {
   async function handleDelete() {
-    await fetch(`${API_URL}/${book.id}`, {
+    await fetch(`${API_URL}/${book._id}`, {
       method: "DELETE",
     });
 
@@ -29,5 +29,8 @@ function BookItem({ book, onDelete }: BookItemProps) {
     </li>
   );
 }
+
+
+
 
 export default BookItem;
